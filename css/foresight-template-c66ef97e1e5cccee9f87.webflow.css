@@ -4025,7 +4025,7 @@ blockquote {
 .hero-g-content-box {
   grid-column-gap: 48px;
   grid-row-gap: 48px;
-  background-color: #000;
+  background-color: #2C264A;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
