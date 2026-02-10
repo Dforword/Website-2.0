@@ -6718,6 +6718,37 @@ blockquote {
   }
 }
 
+/* Custom spacing adjustments - reduce dead space between headers and body copy */
+.article.w-richtext h2 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.article.w-richtext h3 {
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+.article.w-richtext h2 + p,
+.article.w-richtext h3 + p,
+.article.w-richtext h2 + div,
+.article.w-richtext h3 + div {
+  margin-top: 0;
+}
+
+.article.w-richtext p {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.article.w-richtext p:first-child {
+  margin-top: 0;
+}
+
+.heading-three {
+  margin-top: 18px !important;
+}
+
 
 @font-face {
   font-family: 'Uncut Sans';
