@@ -1,3 +1,7 @@
+// Generate a time-based token on page load to verify form was loaded in a browser
+var _contactToken = Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 8);
+var _contactTokenTime = Date.now();
+
 document.getElementById('contact-submit').addEventListener('click', async function () {
   var btn = this;
   var form = document.getElementById('contact-form');
@@ -25,7 +29,7 @@ document.getElementById('contact-submit').addEventListener('click', async functi
     var res = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name: name, email: email, message: message, page: window.location.pathname })
+      body: JSON.stringify({ name: name, email: email, message: message, page: window.location.pathname, company: document.getElementById('contact-company').value, _token: _contactToken, _t: _contactTokenTime })
     });
     if (res.ok) {
       form.style.display = 'none';

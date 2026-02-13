@@ -5,7 +5,18 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, email, message, page } = req.body;
+  const { name, email, message, page, company, _token, _t } = req.body;
+
+  // Honeypot: if filled, it's a bot — return 200 silently
+  if (company) {
+    return res.status(200).json({ success: true });
+  }
+
+  // Time-based token: reject if missing, too fast (< 3s), or too old (> 30min)
+  const elapsed = Date.now() - Number(_t);
+  if (!_token || !_t || elapsed < 3000 || elapsed > 1800000) {
+    return res.status(200).json({ success: true });
+  }
 
   if (!email || !message) {
     return res.status(400).json({ error: 'Email and message are required.' });
