@@ -3612,6 +3612,10 @@ blockquote {
   display: flex;
 }
 
+.article p {
+  max-width: none;
+}
+
 .article ul {
   grid-column-gap: 12px;
   grid-row-gap: 12px;
