@@ -2271,6 +2271,11 @@ blockquote {
   display: flex;
 }
 
+._8-columns.article-wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+
 ._8-columns.search-wrapper {
   grid-column-gap: 72px;
   grid-row-gap: 72px;
