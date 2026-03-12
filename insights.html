@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Blog | Ragu AI</title>
+  <title>Insights | Ragu AI</title>
   <meta content="Perspectives and insights from the Ragu AI team." name="description">
-  <meta content="Blog | Ragu AI" property="og:title">
+  <meta content="Insights | Ragu AI" property="og:title">
   <meta content="Perspectives and insights from the Ragu AI team." property="og:description">
-  <meta content="Blog | Ragu AI" property="twitter:title">
+  <meta content="Insights | Ragu AI" property="twitter:title">
   <meta content="Perspectives and insights from the Ragu AI team." property="twitter:description">
   <meta property="og:type" content="website">
   <meta content="https://ragu.ai/images/Ragu_indigo_background.png" property="og:image">
@@ -38,11 +38,13 @@ body {
 }
 
 .blog-hero {
-  height: 600px;
+  height: 500px;
   background-color: #2C264A;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 24px;
 }
 
 .blog-hero-title {
@@ -52,6 +54,17 @@ body {
   font-weight: 600;
   text-align: center;
   margin: 0;
+}
+
+.blog-hero-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  color: rgba(255,255,255,0.75);
+  font-weight: 300;
+  text-align: center;
+  margin: 16px 0 0 0;
+  max-width: 600px;
+  line-height: 1.6;
 }
 
 .blog-cards-section {
@@ -134,6 +147,21 @@ body {
   background-color: #2C264A;
   color: #ffffff;
 }
+
+@media (max-width: 930px) {
+  .blog-hero {
+    height: auto;
+    padding: 60px 24px;
+    flex-direction: column;
+  }
+  .blog-hero-title {
+    font-size: 40px;
+  }
+  .blog-hero-subtitle {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
   </style>
 </head>
 <body>
@@ -150,15 +178,15 @@ body {
           </div>
           <nav role="navigation" class="nav-menu w-nav-menu">
             <div class="nav-links">
-              <a href="/index.html" class="mobile-logo w-inline-block"><img src="/images/foresight-logo-dark.svg" loading="eager" alt="Logo for a brand called Ragu"></a>
+              <a href="/index.html" class="mobile-logo w-inline-block"><img src="/images/Ragu_Indigo.svg" loading="eager" alt="Logo for a brand called Ragu"></a>
               <div class="_2-columns nav-item">
-                <a href="/company/about.html" class="nav-link w-nav-link" style="font-size: calc(1em + 4pt);">Dive Deeper</a>
+                <a href="/company/about.html" class="nav-link w-nav-link" style="font-size: calc(1em + 4pt);">Our approach</a>
               </div>
               <div class="_2-columns nav-item">
-                <a href="/blog.html" class="nav-link w-nav-link w--current" style="font-size: calc(1em + 4pt);">Blog</a>
+                <a href="/insights.html" class="nav-link w-nav-link w--current" style="font-size: calc(1em + 4pt);">Insights</a>
               </div>
               <div class="_2-columns nav-item">
-                <a href="/index.html#contact-form" class="nav-link w-nav-link" style="font-size: calc(1em + 4pt);">Contact</a>
+                <a href="/index.html#contact-form" class="nav-link w-nav-link" style="font-size: calc(1em + 4pt);">Let's talk</a>
               </div>
             </div>
           </nav>
@@ -183,11 +211,12 @@ body {
         </div>
       </div><img src="/images/icon-cross.svg" alt="" class="nav-menu-close">
     </div>
-    <div style="background-color: white; height: 80px;"></div>
+    <div style="background-color: white; height: 10px;"></div>
 
     <!-- Hero Section -->
     <div class="blog-hero">
-      <h1 class="blog-hero-title">Our Perspective</h1>
+      <h1 class="blog-hero-title">Insights</h1>
+      <p class="blog-hero-subtitle">Perspectives on AI adoption, strategy, and real-world implementation — from how we think to how we work.</p>
     </div>
 
     <!-- Cards Section -->
@@ -235,9 +264,9 @@ body {
       <div class="row footer-top">
         <div class="_3-columns footer-large-menu">
           <div class="large-link-menu">
-            <a href="/company/about.html" class="heading-two footer-link" style="color: white;">Dive Deeper</a>
-            <a href="/index.html" class="heading-two footer-link" style="color: white;">Capabilities</a>
-            <a href="mailto:hello@ragu.ai" class="heading-two footer-link" style="color: white;">Get in touch</a>
+            <a href="/company/about.html" class="heading-two footer-link" style="color: white;">Our approach</a>
+            <a href="/insights.html" class="heading-two footer-link" style="color: white;">Insights</a>
+            <a href="#contact-section" class="heading-two footer-link" style="color: white;">Let's talk</a>
           </div>
         </div>
       </div>
@@ -252,7 +281,7 @@ body {
           </div>
         </div>
         <div class="footer-bottom-links">
-          <a href="mailto:hello@ragu.ai" class="small-text footer-link" style="color: white;">Contact</a>
+          <a href="mailto:hello@ragu.ai" class="small-text footer-link" style="color: white;">Let's talk</a>
           <a href="/company/privacy-policy.html" class="small-text footer-link" style="color: white;">Privacy Policy</a>
           <a href="/company/terms-of-service.html" class="small-text footer-link" style="color: white;">Terms of Service</a>
           <a href="/company/legal.html" class="small-text footer-link" style="color: white;">Legal</a>

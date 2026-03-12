@@ -1284,7 +1284,6 @@ body {
 
 p {
   line-height: 1.3;
-  max-width: 24em;
   letter-spacing: 0.02em;
 }
 
@@ -1388,7 +1387,7 @@ blockquote {
 }
 
 .section {
-  padding: 36px 24px 60px;
+  padding: 36px 40px 60px;
 }
 
 .section.expertise-slider-section {
@@ -1480,38 +1479,50 @@ blockquote {
   font-weight: 500;
   display: flex;
   max-width: 230px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.button:hover {
+  background-color: var(--ragu-indigo);
+  color: #fff;
+  border-color: var(--ragu-indigo);
 }
 
 .button.nav-row-button {
   flex: 1;
 }
 
-.button.bg-white {
+.button.w-button {
   background-color: var(--ragu-indigo);
-  color: var(--white);
-  border-style: none;
+  color: #fff;
+  border: 1px solid var(--ragu-indigo);
+}
+
+.button.bg-white {
+  background-color: white;
+  color: #2C264A;
+  border-color: white;
+  border-style: solid;
 }
 
 .button.bg-white.hover-effect {
   border-style: solid;
   border-color: var(--white);
-  transition: border-color .2s, background-color .2s, color .2s;
 }
 
 .button.bg-white.hover-effect:hover {
-  border-style: solid;
-  border-color: var(--white);
-  background-color: var(--ragu-indigo);
-  color: var(--white);
+  background-color: white;
+  color: #2C264A;
+  border-color: white;
 }
 
 .button.bg-white.hover-effect-no-border {
-  transition: border-color .2s, background-color .2s, color .2s;
 }
 
 .button.bg-white.hover-effect-no-border:hover {
-  background-color: var(--ragu-indigo);
-  color: var(--white);
+  background-color: white;
+  color: #2C264A;
 }
 
 .button.bg-white-15 {
@@ -1519,14 +1530,12 @@ blockquote {
 }
 
 .button.hover-effect {
-  transition: color .2s, background-color .2s;
 }
 
 .button.hover-effect:hover {
-  border-style: solid;
+  background-color: var(--ragu-indigo);
+  color: #fff;
   border-color: var(--ragu-indigo);
-  background-color: var(--white);
-  color: var(--ragu-indigo);
 }
 
 .button.align-left {
@@ -1615,7 +1624,7 @@ blockquote {
 
 .footer {
   grid-column-gap: 144px;
-  grid-row-gap: 144px;
+  grid-row-gap: 40px;
   background-color: var(--ragu-indigo);
   color: var(--white);
   flex-flow: column;
@@ -1809,6 +1818,8 @@ blockquote {
   background-color: #0000;
   padding-left: 24px;
   padding-right: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .navbar-row {
@@ -1870,10 +1881,11 @@ blockquote {
 }
 
 .nav-links {
-  grid-column-gap: 24px;
+  grid-column-gap: clamp(4px, 1.5vw, 24px);
   grid-row-gap: 24px;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: nowrap;
   display: flex;
 }
 
@@ -1971,6 +1983,10 @@ blockquote {
   font-size: 32px;
   font-weight: 500;
   line-height: 1.05em;
+}
+
+.heading-two.footer-link {
+  font-size: 14px;
 }
 
 .heading-two.footer-link {
@@ -2194,6 +2210,11 @@ blockquote {
 
 .nav-logo-link {
   flex: 1;
+  display: block !important;
+}
+
+._2-columns.logo-item {
+  display: block !important;
 }
 
 .row {
@@ -2207,7 +2228,7 @@ blockquote {
 }
 
 .row.footer-bottom {
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
@@ -2312,11 +2333,11 @@ blockquote {
 }
 
 .large-link-menu {
-  grid-column-gap: 9px;
+  grid-column-gap: 32px;
   grid-row-gap: 9px;
-  flex-flow: column;
+  flex-flow: row;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   display: flex;
 }
 
@@ -2348,7 +2369,9 @@ blockquote {
   grid-column-gap: 24px;
   grid-row-gap: 24px;
   display: flex;
+  width: fit-content;
 }
+
 
 .page {
   background-color: var(--white);
@@ -2738,7 +2761,7 @@ blockquote {
 
 .full-width-image {
   width: 100%;
-  height: 693.078px;
+  height: 100%;
   display: block;
 }
 
@@ -3865,6 +3888,7 @@ blockquote {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
+  font-size: 34px;
   display: flex;
 }
 
@@ -4024,6 +4048,8 @@ blockquote {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
+  height: 600px;
+  overflow: hidden;
   display: grid;
 }
 
@@ -4130,7 +4156,7 @@ blockquote {
 
 .title-text-a {
   letter-spacing: -.02em;
-  font-size: 72px;
+  font-size: 54px;
   font-weight: 500;
   line-height: .95em;
 }
@@ -4138,7 +4164,7 @@ blockquote {
 .title-text-b {
   letter-spacing: -.02em;
   white-space: nowrap;
-  font-size: 72px;
+  font-size: 54px;
   font-weight: 500;
   line-height: .95em;
 }
@@ -4784,9 +4810,10 @@ blockquote {
   margin-left: 5px;
   margin-right: 5px;
   padding: 5px 10px;
-  font-size: 14px;
+  font-size: clamp(10px, 1.1vw, 14px);
   line-height: 20px;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -4896,8 +4923,8 @@ blockquote {
 
   .section {
     padding-bottom: 48px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .section.account-section {
@@ -4962,6 +4989,7 @@ blockquote {
   .mobile-logo {
     margin-bottom: 48px;
     display: block;
+    width: 80px;
   }
 
   .nav-menu-close {
@@ -6588,7 +6616,7 @@ blockquote {
   }
 }
 
-#w-node-a517b812-dbdb-526c-38bd-db3f8e442ca9-893d1efa, #w-node-a517b812-dbdb-526c-38bd-db3f8e442cad-893d1efa, #landing.w-node-f475f3fc-d7df-0462-b634-6d316bac4f42-893d1efa, #w-node-_5ee5af15-fad1-0d74-9676-055db930fdd7-893d1efb, #w-node-_5ee5af15-fad1-0d74-9676-055db930fdda-893d1efb, #w-node-_5ee5af15-fad1-0d74-9676-055db930fddd-893d1efb, #w-node-_5ee5af15-fad1-0d74-9676-055db930fde1-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa13-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa1a-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa1c-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa25-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa27-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa30-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa32-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa3b-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa3d-893d1efb, #w-node-d7e6e912-a1c7-9d2b-d803-ab7e0c2087e2-893d1efb, #w-node-d7e6e912-a1c7-9d2b-d803-ab7e0c2087e7-893d1efb, #w-node-d7e6e912-a1c7-9d2b-d803-ab7e0c2087e9-893d1efb, #w-node-d7e6e912-a1c7-9d2b-d803-ab7e0c2087ec-893d1efb, #w-node-d7e6e912-a1c7-9d2b-d803-ab7e0c2087ee-893d1efb, #w-node-d7e6e912-a1c7-9d2b-d803-ab7e0c2087f1-893d1efb, #w-node-d7e6e912-a1c7-9d2b-d803-ab7e0c2087f3-893d1efb, #w-node-_45f27038-793d-68fc-45df-fff06e17bd55-893d1efb, #w-node-_45f27038-793d-68fc-45df-fff06e17bd57-893d1efb, #w-node-_45f27038-793d-68fc-45df-fff06e17bd5a-893d1efb, #w-node-_45f27038-793d-68fc-45df-fff06e17bd5b-893d1efb, #w-node-_45f27038-793d-68fc-45df-fff06e17bd60-893d1efb, #w-node-_45f27038-793d-68fc-45df-fff06e17bd62-893d1efb, #w-node-_07d8c5a3-5d78-cafa-c997-49ef67b6e029-893d1efb, #w-node-_07d8c5a3-5d78-cafa-c997-49ef67b6e02b-893d1efb, #w-node-_09a1cce4-4d9e-416b-5c27-a74e2d39a2c5-893d1efb, #w-node-_8c7f5785-2833-15de-0e8d-f6298aef5869-893d1efb, #w-node-_39a3bc5b-d339-9714-cc2e-cb4b85940802-893d1efb, #w-node-_600716ea-d1fa-b3ce-024a-c4bf67a03c12-893d1efd, #w-node-b3b6ede4-a93b-ced6-15cd-eca197b6c9b8-893d1efd {
+#w-node-a517b812-dbdb-526c-38bd-db3f8e442ca9-893d1efa, #w-node-a517b812-dbdb-526c-38bd-db3f8e442cad-893d1efa, #landing.w-node-f475f3fc-d7df-0462-b634-6d316bac4f42-893d1efa, #w-node-_5ee5af15-fad1-0d74-9676-055db930fdd7-893d1efb, #w-node-_5ee5af15-fad1-0d74-9676-055db930fdda-893d1efb, #w-node-_5ee5af15-fad1-0d74-9676-055db930fddd-893d1efb, #w-node-_5ee5af15-fad1-0d74-9676-055db930fde1-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa13-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa1a-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa1c-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa25-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa27-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa30-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa32-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa3b-893d1efb, #w-node-_7fde2867-281b-fe98-c80f-24a3dcdafa3d-893d1efb, #w-node-d7e6e912-a1c7-9d2b-d803-ab7e0c2087e2-893d1efb, #w-node-d7e6e912-a1c7-9d2b-d803-ab7e0c2087e7-893d1efb, #w-node-d7e6e912-a1c7-9d2b-d803-ab7e0c2087e9-893d1efb, #w-node-d7e6e912-a1c7-9d2b-d803-ab7e0c2087ec-893d1efb, #w-node-d7e6e912-a1c7-9d2b-d803-ab7e0c2087ee-893d1efb, #w-node-d7e6e912-a1c7-9d2b-d803-ab7e0c2087f1-893d1efb, #w-node-d7e6e912-a1c7-9d2b-d803-ab7e0c2087f3-893d1efb, #w-node-_45f27038-793d-68fc-45df-fff06e17bd55-893d1efb, #w-node-_45f27038-793d-68fc-45df-fff06e17bd57-893d1efb, #w-node-_45f27038-793d-68fc-45df-fff06e17bd5a-893d1efb, #w-node-_45f27038-793d-68fc-45df-fff06e17bd60-893d1efb, #w-node-_45f27038-793d-68fc-45df-fff06e17bd62-893d1efb, #w-node-_07d8c5a3-5d78-cafa-c997-49ef67b6e029-893d1efb, #w-node-_07d8c5a3-5d78-cafa-c997-49ef67b6e02b-893d1efb, #w-node-_09a1cce4-4d9e-416b-5c27-a74e2d39a2c5-893d1efb, #w-node-_8c7f5785-2833-15de-0e8d-f6298aef5869-893d1efb, #w-node-_39a3bc5b-d339-9714-cc2e-cb4b85940802-893d1efb, #w-node-_600716ea-d1fa-b3ce-024a-c4bf67a03c12-893d1efd, #w-node-b3b6ede4-a93b-ced6-15cd-eca197b6c9b8-893d1efd {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
