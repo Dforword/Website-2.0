@@ -2210,11 +2210,13 @@ blockquote {
 
 .nav-logo-link {
   flex: 1;
-  display: block !important;
 }
 
 ._2-columns.logo-item {
-  display: block !important;
+  display: flex;
+  flex-shrink: 0;
+  max-width: none;
+  width: auto;
 }
 
 .row {
@@ -4959,9 +4961,13 @@ blockquote {
   }
 
   .navbar-row {
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     display: flex;
+  }
+
+  .nav-button-wrapper {
+    margin-left: 0;
   }
 
   .nav-dropdown-toggle {
