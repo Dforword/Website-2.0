@@ -1532,6 +1532,13 @@ blockquote {
 .button.hover-effect {
 }
 
+.button.hover-effect.form-button {
+  display: inline-flex;
+  width: auto;
+  max-width: none;
+  white-space: nowrap;
+}
+
 .button.hover-effect:hover {
   background-color: var(--ragu-indigo);
   color: #fff;
@@ -2230,7 +2237,7 @@ blockquote {
 }
 
 .row.footer-bottom {
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -2448,7 +2455,6 @@ blockquote {
 .button-wrapper.nav-button-wrapper {
   flex: 1;
   display: flex;
-  justify-content: flex-end;
 }
 
 .hero-a-background-image {
@@ -4133,7 +4139,7 @@ blockquote {
 
 .belief-list {
   grid-column-gap: 48px;
-  grid-row-gap: 48px;
+  grid-row-gap: 0px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -4144,7 +4150,7 @@ blockquote {
 
 .belief-list-item {
   grid-column-gap: 48px;
-  grid-row-gap: 48px;
+  grid-row-gap: 20px;
   border: 0 solid #0000001a;
   border-top-width: 1px;
   flex-direction: column;
@@ -4940,7 +4946,7 @@ blockquote {
 
   .footer {
     grid-column-gap: 72px;
-    grid-row-gap: 72px;
+    grid-row-gap: 0px;
   }
 
   .menu-button {
@@ -5119,7 +5125,10 @@ blockquote {
   }
 
   ._2-columns.logo-item {
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    min-width: 135px;
   }
 
   ._3-columns {
@@ -5817,8 +5826,11 @@ blockquote {
   }
 
   ._2-columns.logo-item {
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
     width: auto;
+    min-width: 135px;
   }
 
   ._4-columns.bordered-text-feature-title {
@@ -6296,7 +6308,10 @@ blockquote {
   }
 
   ._2-columns.logo-item {
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    min-width: 135px;
   }
 
   ._4-columns.footer-copyright {
@@ -6343,6 +6358,7 @@ blockquote {
   .large-link-menu {
     grid-row-gap: 12px;
     flex-flow: column;
+    align-items: flex-start;
   }
 
   .footer-bottom-links {
