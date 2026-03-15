@@ -1390,6 +1390,10 @@ blockquote {
   padding: 36px 40px 60px;
 }
 
+.section.short {
+  height: 400px;
+}
+
 .section.expertise-slider-section {
   background-color: var(--ragu-indigo);
   color: var(--white);
@@ -6214,7 +6218,7 @@ blockquote {
 @media screen and (max-width: 479px) {
   .section-contents,
   .service-link-contents {
-    grid-column-gap: 36px;
+    grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
 
@@ -6224,7 +6228,7 @@ blockquote {
   }
 
   .service-link-contents {
-    grid-column-gap: 36px;
+    grid-column-gap: 0px;
     grid-row-gap: 0px;
     padding: 18px;
   }
@@ -6481,7 +6485,7 @@ blockquote {
   }
 
   .service-link-contents {
-    grid-column-gap: 36px;
+    grid-column-gap: 0px;
     grid-row-gap: 36px;
     padding: 18px;
   }
