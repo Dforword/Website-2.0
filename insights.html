@@ -76,18 +76,27 @@ body {
   display: flex;
   gap: 32px;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   max-width: 1320px;
   margin: 0 auto;
 }
 
 .blog-card {
   background-color: #ffffff;
-  width: 400px;
-  min-height: 400px;
+  flex: 1;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+@media screen and (max-width: 900px) {
+  .blog-cards-row {
+    flex-wrap: wrap;
+  }
+  .blog-card {
+    align-self: stretch;
+  }
 }
 
 .blog-card-image {
@@ -98,7 +107,7 @@ body {
 }
 
 .blog-card-body {
-  padding: 20px;
+  padding: 50px 36px 36px 36px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -107,14 +116,14 @@ body {
 .blog-card-date {
   font-size: 14px;
   color: #555555;
-  margin: 0 0 10px 0;
+  margin: 8px 0 10px 0;
 }
 
 .blog-card-title {
-  font-size: 18px;
-  color: #000000;
+  font-size: 20px;
+  color: #2C264A;
   font-weight: 600;
-  margin: 0 0 10px 0;
+  margin: 0 0 0 0;
   line-height: 1.4;
 }
 
@@ -130,8 +139,8 @@ body {
   display: inline-block;
   padding: 10px 20px;
   border: 1px solid #2C264A;
-  background-color: #ffffff;
-  color: #2C264A;
+  background-color: #2C264A;
+  color: #ffffff;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -225,10 +234,9 @@ body {
 
         <!-- Card 1 -->
         <div class="blog-card">
-          <img src="/images/Landing-04.jpg" alt="AI Strategy" class="blog-card-image">
           <div class="blog-card-body">
-            <p class="blog-card-date">March 3, 2026</p>
             <h2 class="blog-card-title">AI Is Moving Faster Than Humans. That's Not the Problem.</h2>
+            <p class="blog-card-date">March 3, 2026</p>
             <p class="blog-card-description">AI is advancing faster than humans can reasonably absorb it. Not because people aren't smart enough. Because that's not how people work. We explore the pace mismatch that most organizations won't name.</p>
             <a href="/blog/article-1.html" class="blog-card-button">Read more</a>
           </div>
@@ -236,10 +244,9 @@ body {
 
         <!-- Card 2 -->
         <div class="blog-card">
-          <img src="/images/Landing-05.jpg" alt="Agentic AI" class="blog-card-image">
           <div class="blog-card-body">
-            <p class="blog-card-date">February 18, 2026</p>
             <h2 class="blog-card-title">Why AI Feels Harder Than Every Other Tool You've Adopted</h2>
+            <p class="blog-card-date">February 18, 2026</p>
             <p class="blog-card-description">The discomfort isn't resistance. It's a rational response to a tool that works differently from anything that came before. We explain the three things that make AI uniquely hard to absorb.</p>
             <a href="/blog/article-2.html" class="blog-card-button">Read more</a>
           </div>
@@ -247,10 +254,9 @@ body {
 
         <!-- Card 3 -->
         <div class="blog-card">
-          <img src="/images/Landing-06.jpg" alt="Human and AI" class="blog-card-image">
           <div class="blog-card-body">
-            <p class="blog-card-date">January 29, 2026</p>
             <h2 class="blog-card-title">Your AI Adoption Strategy Is Solving the Wrong Problem</h2>
+            <p class="blog-card-date">January 29, 2026</p>
             <p class="blog-card-description">Most organizations are training for knowledge when the real barrier is confidence. That's a different problem with a different solution — and most adoption dashboards won't tell you which one you have.</p>
             <a href="/blog/article-3.html" class="blog-card-button">Read more</a>
           </div>
