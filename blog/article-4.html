@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The Luxury AI Paradox | Ragu AI</title>
+  <meta content="One luxury travel company leaned into AI publicly — and won awards for it. Most of the sector is still hiding." name="description">
+  <meta content="The Luxury AI Paradox | Ragu AI" property="og:title">
+  <meta property="og:type" content="website">
+  <meta content="https://ragu.ai/images/Ragu_indigo_background.png" property="og:image">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KHZ44KRK"></script>
+  <!-- End Google Tag Manager -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="/css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="/css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="/images/Ragu_indigo_background.png" rel="apple-touch-icon">
+  <style>
+/* ===== Variables ===== */
+:root {
+  --ragu-indigo: #2C264A;
+  --white: #FFFFFF;
+  --white-20: #ffffff33;
+  --dark-10: #2222221a;
+}
+
+/* ===== Base ===== */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin: 0;
+}
+a { text-decoration: none; }
+
+/* ===== Page ===== */
+.page {
+  background-color: #fff;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: transparent;
+  padding: 10px 24px;
+}
+.navbar-row {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  display: flex;
+}
+.nav-logo-link { flex: 1; }
+._2-columns {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  width: fit-content;
+  max-width: fit-content;
+  display: flex;
+}
+._2-columns.logo-item {
+  display: flex;
+  flex-shrink: 0;
+  max-width: none;
+  width: auto;
+}
+.nav-menu {
+  flex: 1;
+  position: static;
+}
+.nav-links {
+  grid-column-gap: clamp(4px, 1.5vw, 24px);
+  grid-row-gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  display: flex;
+}
+.mobile-logo { display: none; }
+.nav-menu-close {
+  z-index: 99999;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  top: 24px;
+  right: 24px;
+}
+.nav-link {
+  color: #1a1b1f;
+  letter-spacing: .25px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px 10px;
+  font-size: clamp(10px, 1.1vw, 14px);
+  line-height: 20px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav-link:hover { color: rgba(26,27,31,0.75); }
+.w-nav-link.w--current {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: rgba(26,27,31,0.3);
+}
+.button-wrapper {
+  grid-column-gap: 3px;
+  grid-row-gap: 3px;
+  flex: 0 auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+.button-wrapper.nav-button-wrapper { flex: 1; display: flex; }
+.button {
+  border: 1px solid #2C264A;
+  background-color: #2C264A;
+  color: #fff;
+  text-align: center;
+  border-radius: 40px;
+  justify-content: center;
+  align-items: center;
+  height: 46px;
+  padding: 0 36px;
+  font-weight: 500;
+  display: flex;
+  max-width: 230px;
+  -webkit-appearance: none;
+  appearance: none;
+  text-decoration: none;
+}
+.button.nav-row-button { flex: 1; }
+.button.nav-row-button:hover {
+  opacity: 1;
+  background-color: #2C264A !important;
+  border-color: #2C264A !important;
+  color: #fff !important;
+  text-decoration: none;
+}
+.text-block-4 {
+  justify-content: center;
+  align-self: center;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+}
+.menu-button { padding: 0; }
+.menu-button-wrapper {
+  justify-content: center;
+  width: 36px;
+  height: 48px;
+  display: flex;
+  position: relative;
+}
+.menu-button-horziontal {
+  grid-column-gap: 6px;
+  grid-row-gap: 6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+}
+.menu-button-cross {
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+}
+.menu-button-cross-line {
+  background-color: #262626;
+  width: 75%;
+  height: 2px;
+  position: absolute;
+}
+.menu-button-horizontal-line {
+  background-color: #262626;
+  width: 100%;
+  height: 2px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  grid-column-gap: 144px;
+  grid-row-gap: 40px;
+  background-color: #2C264A;
+  color: #fff;
+  flex-flow: column;
+  padding: 36px 24px 24px;
+  display: flex;
+}
+.row {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+.row.footer-bottom {
+  justify-content: space-between;
+  align-items: center;
+}
+._3-columns {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  width: calc(25vw - 36px);
+  max-width: 384px;
+  display: flex;
+}
+._3-columns.footer-large-menu { font-weight: bold; }
+._7-columns {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  width: calc(58.3333vw - 52px);
+  max-width: 928px;
+  display: flex;
+}
+._7-columns.footer-logo-copyright {
+  justify-content: flex-start;
+  align-items: center;
+}
+.horizontal-line {
+  background-color: rgba(34,34,34,0.1);
+  width: 100%;
+  height: 1px;
+  padding: 10px;
+  background-clip: content-box;
+}
+.horizontal-line.white { background-color: rgba(255,255,255,0.2); }
+.large-link-menu {
+  grid-column-gap: 32px;
+  grid-row-gap: 9px;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+.footer-link {
+  color: #fff;
+  font-weight: 500;
+  transition: opacity .2s;
+  text-decoration: none;
+}
+.footer-link:hover { opacity: .5; }
+.footer-bottom-links {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  display: flex;
+  width: fit-content;
+}
+.heading-two {
+  color: #2C264A;
+  letter-spacing: -.01em;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.05em;
+}
+.heading-two.footer-link {
+  font-size: 14px;
+  color: #fff;
+}
+.small-text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3em;
+}
+
+/* ===== Hero ===== */
+.hero {
+  background-color: #2C264A;
+  color: #fff;
+}
+.hero-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 60px 160px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.hero-back {
+  padding: 24px 24px 0 24px;
+}
+.hero .article-back {
+  color: rgba(255,255,255,0.6);
+  margin: 0;
+}
+.hero .article-back:hover { color: #fff; }
+.category {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  max-width: 800px;
+  margin: 0;
+}
+.hero .subtitle {
+  font-size: 19px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0;
+}
+.byline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+.byline-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.15);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.byline-text .author {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+.byline-text .meta {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ===== Article ===== */
+.article-wrapper {
+  margin: 60px auto;
+  padding: 0 160px;
+  width: 100%;
+  max-width: 1120px;
+  box-sizing: border-box;
+}
+.article-wrapper p {
+  font-size: 17px;
+  color: #1a1a1a;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  max-width: 800px;
+}
+.article-wrapper h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  margin: 40px 0 16px 0;
+  max-width: 800px;
+}
+.article-back {
+  display: inline-block;
+  margin: 40px 40px 0 40px;
+  font-size: 14px;
+  color: #2C264A;
+  text-decoration: none;
+  font-weight: 500;
+}
+.article-back:hover { text-decoration: underline; }
+.pull-quote {
+  margin: 40px 0;
+  padding: 0 0 0 24px;
+  border-left: 3px solid #2C264A;
+  max-width: 700px;
+}
+.pull-quote p {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #2C264A;
+  letter-spacing: -0.01em;
+  margin-bottom: 0;
+}
+
+/* ===== Responsive: 991px ===== */
+@media screen and (max-width: 991px) {
+  .footer { grid-column-gap: 72px; grid-row-gap: 0; }
+  .menu-button { flex-direction: row; justify-content: center; align-items: center; padding: 0; display: block; }
+  .menu-button.w--open { background-color: transparent; }
+  .navbar { padding-left: 12px; padding-right: 12px; }
+  .navbar-row { justify-content: space-between; align-items: center; display: flex; }
+  .nav-button-wrapper { margin-left: 0; }
+  .nav-menu { z-index: 999; background-color: #fff; position: fixed; inset: 0; overflow: scroll; }
+  .nav-links { flex-direction: column; align-items: flex-start; padding: 24px; }
+  .mobile-logo { margin-bottom: 48px; display: block; width: 80px; }
+  .nav-menu-close { pointer-events: auto; }
+  .heading-two { font-size: 36px; line-height: 1.1em; }
+  .row.footer-bottom { flex-flow: column-reverse; justify-content: flex-start; align-items: flex-start; }
+  .row.footer-top { grid-column-gap: 72px; grid-row-gap: 72px; flex-flow: column; }
+  ._2-columns { max-width: none; }
+  ._2-columns.nav-item { align-self: stretch; width: auto; }
+  ._2-columns.logo-item { flex-grow: 1; flex-shrink: 0; flex-basis: auto; min-width: 135px; }
+  ._3-columns { max-width: none; }
+  ._3-columns.footer-large-menu { width: 100%; }
+  ._3-columns.footer-logo { width: auto; }
+  ._7-columns { max-width: none; }
+  ._7-columns.footer-logo-copyright { width: 100%; }
+  .large-link-menu { grid-column-gap: 48px; grid-row-gap: 24px; flex-flow: wrap; }
+  .button-wrapper.dark.nav-button-wrapper { flex: none; }
+  .article-wrapper { padding: 0 40px; }
+  .hero-inner { padding: 48px 40px; }
+  .hero h1 { font-size: 36px; }
+}
+
+/* ===== Responsive: 767px ===== */
+@media screen and (max-width: 767px) {
+  body { font-size: 16px; }
+  .heading-two { font-size: 29px; line-height: 1.1em; }
+}
+
+/* ===== Responsive: 479px ===== */
+@media screen and (max-width: 479px) {
+  .navbar-row { grid-column-gap: 18px; grid-row-gap: 18px; }
+  .nav-logo-link.w--current { flex: 1; }
+  .row.footer-bottom, .row.footer-top { grid-column-gap: 48px; grid-row-gap: 48px; }
+  ._2-columns.nav-item { align-self: center; width: auto; }
+  ._2-columns.logo-item { flex-grow: 1; flex-shrink: 0; flex-basis: auto; min-width: 135px; }
+  ._7-columns.footer-logo-copyright { flex-flow: column; justify-content: flex-start; align-items: flex-start; }
+  .large-link-menu { grid-row-gap: 12px; flex-flow: column; align-items: flex-start; }
+  .footer-bottom-links { flex-flow: wrap; }
+  .page { padding-bottom: 0; padding-left: 0; padding-right: 0; }
+  .button-wrapper.dark.nav-button-wrapper { display: none; }
+  .article-wrapper { padding: 0 12px; }
+  .article-wrapper p, .article-wrapper h2 { max-width: 100%; }
+  .article-back { margin: 24px 12px 0 12px; }
+  .hero-inner { padding: 36px 12px; }
+  .hero h1 { font-size: 28px; }
+  .hero .subtitle { font-size: 16px; }
+  .pull-quote p { font-size: 18px; }
+}
+  </style>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHZ44KRK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <div class="page">
+    <div class="navbar-wrapper">
+      <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
+        <div class="navbar-row">
+          <div class="_2-columns logo-item">
+            <a href="/index.html" class="nav-logo-link w-inline-block"><img src="/images/Ragu_Indigo.svg" loading="eager" width="135" alt="" class="nav-logo-image"></a>
+          </div>
+          <nav role="navigation" class="nav-menu w-nav-menu">
+            <div class="nav-links">
+              <a href="/index.html" class="mobile-logo w-inline-block"><img src="/images/Ragu_Indigo.svg" loading="eager" alt="Logo for a brand called Ragu"></a>
+              <div class="_2-columns nav-item">
+                <a href="/company/about.html" class="nav-link w-nav-link" style="font-size: calc(1em + 4pt);">Our approach</a>
+              </div>
+              <div class="_2-columns nav-item">
+                <a href="/insights.html" class="nav-link w-nav-link w--current" style="font-size: calc(1em + 4pt);">Insights</a>
+              </div>
+              <div class="_2-columns nav-item">
+                <a href="/index.html#contact-section" class="nav-link w-nav-link" style="font-size: calc(1em + 4pt);">Let's talk</a>
+              </div>
+              <div class="button-wrapper dark nav-button-wrapper">
+                <a href="https://app.ragu.ai/login/" target="_blank" class="button nav-row-button w-inline-block" style="background-color: #2C264A;">
+                  <div class="text-block-4">Login</div>
+                </a>
+              </div>
+            </div>
+          </nav>
+          <div class="menu-button w-nav-button">
+            <div class="menu-button-wrapper">
+              <div class="menu-button-horziontal">
+                <div class="menu-button-horizontal-line line-1"></div>
+                <div class="menu-button-horizontal-line line-2"></div>
+                <div class="menu-button-horizontal-line line-3"></div>
+              </div>
+              <div class="menu-button-cross">
+                <div class="menu-button-cross-line line-1"></div>
+                <div class="menu-button-cross-line line-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><img src="/images/icon-cross.svg" alt="" class="nav-menu-close">
+    </div>
+    <div class="hero">
+      <div class="hero-back">
+        <a href="/insights.html" class="article-back">← Back to Insights</a>
+      </div>
+      <div class="hero-inner">
+        <div class="category">Perspectives</div>
+        <h1>The luxury AI paradox: why the brands that need it most won't talk about it</h1>
+        <p class="subtitle">One luxury travel company leaned into AI publicly — and won awards for it. Most of the sector is still hiding.</p>
+        <div class="byline">
+          <div class="byline-avatar">EE</div>
+          <div class="byline-text">
+            <div class="author">Elizabeth Ellsworth</div>
+            <div class="meta">Chief Strategy Officer &nbsp;·&nbsp; 5 min read</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-wrapper">
+      <p>A luxury travel company builds an AI tool that lets clients plan trips based on how they want to feel — not where they want to go. Instead of browsing destinations, a traveler types "I want to feel untethered" or "I want to feel wonder like I've never felt before," and the system draws on twenty years of curated experiences to surface something that fits. A team of human experts then refines the recommendation, adding the personal judgment and local knowledge that no algorithm can replicate.</p>
+
+      <p>The tool wins industry recognition. The company — Black Tomato — takes Best Use of AI at the 2025 Luxury Travel Awards, is named a Travel + Leisure Top 10 Tour Operator, one of their Most Influential Travel Specialists, and continues their run as World Travel Awards' Leading Luxury Travel Agency. Media coverage is overwhelmingly positive. Bloomberg writes about it. Men's Journal features it. Clients engage with it.</p>
+
+      <p>And yet, across the wider luxury sector, the dominant instinct remains: don't let anyone think AI is doing the work.</p>
+
+      <h2>The fear is specific</h2>
+
+      <p>This isn't generic technology anxiety. Luxury firms have a particular concern, and it's worth understanding clearly.</p>
+
+      <p>The entire value proposition of luxury — whether it's travel, hospitality, fashion or fine wine — is built on human craft, personal attention and the perception that someone with exceptional taste and judgment is looking after you. AI, in the popular imagination, represents the opposite: automation, mass production, the removal of the human hand.</p>
+
+      <div class="pull-quote">
+        <p>Will clients hear "we've found a smarter way to serve you" — or will they hear "we've replaced the people who used to care about you with software"?</p>
+      </div>
+
+      <p>That fear isn't irrational. Research published in the Journal of Advertising Research found that when luxury brands disclosed AI-generated imagery in their advertising, consumers responded more negatively — perceiving less effort, less authenticity and less brand credibility. Valentino faced widespread backlash for an AI-generated video campaign in late 2025, with consumers calling it cheap and lazy despite the brand being transparent about the technology.</p>
+
+      <p>The instinct to stay quiet makes emotional sense. But it also creates a problem.</p>
+
+      <h2>Silence isn't a strategy</h2>
+
+      <p>The luxury firms avoiding AI publicly aren't necessarily avoiding it privately. Many are experimenting behind the scenes — using AI for demand forecasting, inventory planning, client profiling, content production. The technology is useful, and competitive pressure makes it hard to ignore entirely.</p>
+
+      <p>But when AI stays hidden, it stays unexamined. There's no shared language for how it should and shouldn't be used. No clear boundaries for where automation adds value and where it undermines the brand promise. No way to build organizational competence around a tool that everyone's pretending doesn't exist.</p>
+
+      <p>And the longer that silence lasts, the wider the gap grows between what the organization is actually doing and what it's willing to discuss — with clients, with staff, and sometimes with itself.</p>
+
+      <h2>What Black Tomato got right</h2>
+
+      <p>What makes the Feelings Engine interesting isn't the technology itself. It's the positioning.</p>
+
+      <p>Black Tomato didn't introduce AI as a replacement for their travel experts. They introduced it as a new front door — a way to help clients articulate what they're actually looking for before a human advisor takes over. The AI surfaces possibilities. The people refine them. The client experiences better service because the starting point is sharper.</p>
+
+      <p>That framing matters enormously. It doesn't ask the client to trust the machine. It asks them to trust the brand, which happens to use a smart tool as part of how it delivers.</p>
+
+      <div class="pull-quote">
+        <p>They didn't hide the AI or apologize for it. They built a launch around it, gave it a name, and made it part of who they are.</p>
+      </div>
+
+      <p>The company tied the Feelings Engine to their twentieth anniversary and made it part of a broader platform they call the Pursuit of Feeling. The message was clear: this is who we are, this is how we think about travel, and this technology helps us do it better.</p>
+
+      <h2>The real question for luxury</h2>
+
+      <p>The question isn't whether luxury firms should use AI. Most already are, or will be soon. The question is whether they'll engage with it openly or pretend it doesn't exist.</p>
+
+      <p>Hiding AI doesn't protect the brand. It just means the brand has no say in how AI is perceived when clients inevitably find out. And they will find out — because the same clients using AI to plan dinners, manage finances and organize their lives aren't going to be shocked that their luxury provider uses it too. What would shock them is finding out it was hidden.</p>
+
+      <p>The brands that handle this well will be the ones that do what Black Tomato did: use AI to strengthen the human experience, not replace it, and be straightforward about the role it plays. The ones that stay silent will eventually face a harder conversation — not about whether they use AI, but about why they didn't think their clients could handle knowing.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer" style="background-color: #2C264A;">
+      <div class="row footer-top">
+        <div class="_3-columns footer-large-menu">
+          <div class="large-link-menu">
+            <a href="/company/about.html" class="heading-two footer-link" style="color: white;">Our approach</a>
+            <a href="/insights.html" class="heading-two footer-link" style="color: white;">Insights</a>
+            <a href="/index.html#contact-section" class="heading-two footer-link" style="color: white;">Let's talk</a>
+          </div>
+        </div>
+      </div>
+      <div class="horizontal-line white"></div>
+      <div class="row footer-bottom">
+        <div class="_7-columns footer-logo-copyright">
+          <div class="_3-columns footer-logo">
+            <a href="/index.html" class="w-inline-block"><img src="/images/Ragu_White.svg" loading="lazy" width="68" alt="Ragu White Logo"></a>
+          </div>
+        </div>
+        <div class="footer-bottom-links">
+          <div class="small-text" style="color: white;">© 2026 Ragu. All rights reserved.</div>
+          <a href="/company/privacy-policy.html" class="small-text footer-link" style="color: white;">Privacy Policy</a>
+          <a href="/company/terms-of-service.html" class="small-text footer-link" style="color: white;">Terms of Service</a>
+          <a href="/company/legal.html" class="small-text footer-link" style="color: white;">Legal</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6926133bdf91120b893d1f25" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="/js/webflow.js" type="text/javascript"></script>
+</body>
+</html>
