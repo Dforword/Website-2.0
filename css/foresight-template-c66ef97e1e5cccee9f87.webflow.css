@@ -1496,6 +1496,13 @@ blockquote {
 .button.nav-row-button {
   flex: 1;
 }
+.button.nav-row-button:hover {
+  opacity: 1;
+  background-color: #2C264A !important;
+  border-color: #2C264A !important;
+  color: #fff !important;
+  text-decoration: none;
+}
 
 .button.w-button {
   background-color: var(--ragu-indigo);
